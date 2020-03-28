@@ -1,0 +1,1 @@
+web: gunicorn coronavirus_tracker.wsgi --log-file -

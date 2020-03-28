@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Coronavirus Updates{% endblock title %}
+
+ 
+
+
+{% block content %}
+  <h1>Coronavirus Updates in India</h1>
+  <p id="date"><i class="fa fa-calendar"></i>&nbsp;</p>
+  <hr>
+  <br>
+  {% for case in object_list %}
+    <h3>Total Cases: {{case.total_cases}}</h3>
+    <br>
+    <h3>New Cases: {{case.new_cases}}</h3>
+    <br>
+    <h3>Total Deaths: {{case.total_deaths}}</h3>
+    <br>
+    <h3>New Deaths: {{case.new_deaths}}</h3>
+    <br>
+    <h3>Active Cases: {{case.active_cases}}</h3>
+    <br>
+    <h3>Total Recovered: {{case.total_recovered}}</h3>
+    <br>
+    <h3>Critical: {{case.serious_critical}}</h3>
+  {% endfor %}
+
+  <script type="text/javascript">
+      n =  new Date();
+      y = n.getFullYear();
+      m = n.getMonth() + 1;
+      d = n.getDate();
+      document.getElementById("date").innerHTML += d + "/" + m + "/" + y;
+  </script>
+
+{% endblock %}

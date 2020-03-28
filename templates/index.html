@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Coronavirus Cases Tracker</h1>
+  <p class="lead">Coronavirus cases tracker built with Django.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'case' %}"
+    role="button">View Latest Cases</a>
+  </p>
+</div>
+{% endblock content %}
